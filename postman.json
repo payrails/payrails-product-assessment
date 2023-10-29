@@ -1,0 +1,149 @@
+{
+	"info": {
+		"_postman_id": "4eb681ef-3bc3-4cab-8545-5908a0f11730",
+		"name": "Payrails Product assessment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18585260",
+		"_collection_link": "https://payrails.postman.co/workspace/Payrails-Product-Assessment~72c643ed-9abd-4ecd-9a88-a823447f0951/collection/18585260-4eb681ef-3bc3-4cab-8545-5908a0f11730?action=share&source=collection_link&creator=18585260"
+	},
+	"item": [
+		{
+			"name": "Request an access token",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"postman.setEnvironmentVariable(\"bearerToken\", jsonData.access_token);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "lbnM6cmVhZCIsInRyYW5zZmVyczpjcmVhdGUiLCJ0cmFuc2ZlcnM6bGlzdCIsInRyYW5zZmVyczpyZWFkIiwidXNl",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "x-api-key",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3001/auth/token/:clientId",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"auth",
+						"token",
+						":clientId"
+					],
+					"variable": [
+						{
+							"key": "clientId",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Initialize the client",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{bearerToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"type\": \"tokenization\",\n    \"holderReference\": \"Payrails Product assessment\",\n    \"workflowCode\": \"payment-acceptance\",\n    \"merchantReference\": \"order-1234\",\n    \"amount\": {\n        \"value\": \"12.50\",\n        \"currency\": \"EUR\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/merchant/client/init",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"merchant",
+						"client",
+						"init"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Tokenize an instrument",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{bearerToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/public/payment/instruments/tokenize",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"public",
+						"payment",
+						"instruments",
+						"tokenize"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
