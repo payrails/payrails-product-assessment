@@ -1,6 +1,6 @@
 # Payrails Product assessement
 
-Welcome to Payrails Product assessement! This repository contains all the resources you need to perform you Payrails Product assessment. 
+Welcome to the Payrails Product assessement! This repository contains all the resources you need to complete the Payrails Product assessment. 
 
 This assessment is part of the application process for the position of [Technical Prodsuct Manager](./job-description.md) at Payrails.
 
@@ -9,11 +9,11 @@ This assessment is part of the application process for the position of [Technica
 
 ## Goal
 
-**Create an Application for tokenizing cards via Payrails with Client Side Encryption**!
+**Create an Application for tokenizing cards via Payrails using Client Side Encryption**!
 
 ## Setup & Resources
 
-These are the recources and tooling you will need to successfully deliver your acesssment.
+These are the recources and tooling you will need to successfully deliver your assessment.
 
 ### Payrails documentation
 
@@ -22,12 +22,12 @@ Payrails documentation is available [here](https://docs.payrails.com/). It conta
 - [API reference](https://docs.payrails.com/reference/)
 
 > [!NOTE]
-> Beware Payrails is a complex product supporting many features and flows. You should probably follow the assessment steps and cherry pick what you need from the documentation, rather than going head first into understanding all Payrails concepts from the documentation.
+> Beware Payrails is a complex product supporting many features and flows. You should probably follow the assessment steps and cherry-pick what you need from the documentation, rather than going head first into understanding all Payrails concepts from the documentation.
 
 
 ### Mockoon
 
-[Mockcoon](https://mockoon.com/) is a simple API mock server you will run locally to simulate Payrails API for this exercise. 
+[Mockcoon](https://mockoon.com/) is a simple API mock server you can run locally to simulate Payrails API for this exercise. 
 
 You can either use the [Mockoon CLI](https://github.com/mockoon/mockoon/tree/main/packages/cli#installation):
 
@@ -80,7 +80,7 @@ sequenceDiagram
 First, your must authenticate yourself to Payrails in order to fetch the Client Side Encryption credentials. Use the [Request access token](https://docs.payrails.com/reference/getoauthtoken) endpoint for that matter.
 
 > [!IMPORTANT]
-> The authentication request to Payrails contains your secret Payrails API key in the `x-api-key` header. It is obviously a very sensitive information. Therefore the request must be performed from your server-side application so that the secret isn't shared with the client.
+> The authentication request to Payrails contains your secret Payrails API key in the `x-api-key` header. It is obviously very sensitive information. Therefore the request must be performed from your server-side application so that the secret isn't shared with the client.
 
 In this exercise, the mock server will accept any value for the API key, so you can decide the value. Just make sure the `x-api-key` is present.
 
@@ -88,11 +88,11 @@ Save the `access_token` value in the Response, you will now use it to authentica
 
 #### 1.2 Initialize the client
 
-This request must also happen on your server-side, straigtht after [1.1 Request access token](#11-request-access-token).
+This request must also happen on your server-side, straight after [1.1 Request access token](#11-request-access-token).
 
 Your are going to call the [Initialize a client SDK](https://docs.payrails.com/reference/clientinit) with:
-- the Bearer token you saved from the [1.1 Request access token](#11-request-access-token) as an `authorization` Header
-- the Request body parameter `type` set for Client Side Encryption:
+- the bearer token you saved from the [1.1 Request access token](#11-request-access-token) as an `authorization` Header
+- the request body parameter `type` set for Client Side Encryption:
 ```json
 {
   "type": "tokenization",
@@ -100,7 +100,7 @@ Your are going to call the [Initialize a client SDK](https://docs.payrails.com/r
 }
 ```
 
-Payrails API will return all configurations to initialize your client in the `data` field as a `base64` string. Take the value and decode it (most programing language provide native helpers, e.g. [javascript](https://developer.mozilla.org/en-US/docs/Glossary/Base64#javascript_support)).
+Payrails API will return all configurations to initialize your client in the `data` field as a `base64` string. Take the value and decode it (most programming language provide native helpers, e.g., [javascript](https://developer.mozilla.org/en-US/docs/Glossary/Base64#javascript_support)).
 
 After decoding the data, you obtain a JSON object. Pass the following to your frontend, you will need both for tokenization:
 - `holderReference`
@@ -108,7 +108,7 @@ After decoding the data, you obtain a JSON object. Pass the following to your fr
 
 ### 2. Tokenize the card
 
-To tokenize a card you need a frontend with a card Form similar to: 
+To tokenize a card you need a frontend with a card form similar to: 
 ![Simple Card Form example](./form.png)
 
 > [!NOTE]
@@ -150,16 +150,16 @@ To ensure successful tokenization, please verify that the holder reference provi
 
 ## Expectations
 
-1. Use the progaming language(s) of your choice: we love them all, it really doesn't matter!
+1. Use the programming language(s) of your choice: we love them all, it really doesn't matter!
 2. Clone this repository and push the your solution there.
 3. Extend this Readme with some instructions to test your solution.
-4. Prepare yourself for an online demo and code review together
+4. Prepare yourself for an online demo and code review.
 
 ## Last advice before you get started
 
 - **We evaluate if you can follow instructions and get stuff done!** So focus on the above instructions and do not waste too much time on the GUI or the code quality.
-- **Are you getting some help?** It's fine to research on Stakeoverflow and ChatGPT. But beware to understand what you're pasting because we will code review together and ask questions!
-- **Don't give up!** The mock server is permissive, it will never complain! Therefore if you get stuck at a step, donn't give up! Keep going with the rest of the assessment and we debrief during the review what was your blocker. 
+- **Are you stuck?** It's fine to research on Stakeoverflow and ChatGPT. But beware to understand what you're pasting because we will code review together and ask questions!
+- **Don't give up!** The mock server is permissive, it will never complain! Therefore if you get stuck at a step, don't give up! Keep going with the rest of the assessment and we will debrief during the review what was your blocker. 
 
 ## Support
 
