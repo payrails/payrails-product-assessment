@@ -33,10 +33,10 @@ Within that broader Payrails Product Team, as part of the Payment Integrations t
 
 ## You'll be great for this role if
 
-- You possess 5-7 years of experience in a technical role, ideally in payment integrations or a closely related field.
+- You have 5-7 years of experience in a technical role, ideally in payment integrations or a closely related field.
 - API integrations, especially in payment platforms, are your forte.
 - You're adept with tools such as Jira, Postman, GitHub, particularly when it comes to integration testing and development.
-- Your track record showcases successful management of technical integration projects from inception to deployment.
+- You have a strong track record showcasing successful management of technical integration projects from inception to deployment.
 - You have an innate ability to devise and roll out scalable integration solutions, emphasizing automation and efficiency.
 - Distilling and communicating complex, integration-specific challenges in an easily digestible format for a wide-ranging audience is your specialty.
 - Fluency in English
