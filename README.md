@@ -2,7 +2,7 @@
 
 Welcome to the Payrails Product assessement! This repository contains all the resources you need to complete the Payrails Product assessment. 
 
-This assessment is part of the application process for the position of [Technical Prodsuct Manager](./job-description.md) at Payrails.
+This assessment is part of the application process for the position of [Technical Product Manager](./job-description.md) at Payrails.
 
 > [!IMPORTANT]
 > Read this page very carefully to understand the precise expectations before you get started.
@@ -158,7 +158,7 @@ To ensure successful tokenization, please verify that the holder reference provi
 ## Last advice before you get started
 
 - **We evaluate if you can follow instructions and get stuff done!** So focus on the above instructions and do not waste too much time on the GUI or the code quality.
-- **Are you stuck?** It's fine to research on Stakeoverflow and ChatGPT. But beware to understand what you're pasting because we will code review together and ask questions!
+- **Are you stuck?** It's fine to research on Stackoverflow and ChatGPT. But beware to understand what you're pasting because we will code review together and ask questions!
 - **Don't give up!** The mock server is permissive, it will never complain! Therefore if you get stuck at a step, don't give up! Keep going with the rest of the assessment and we will debrief during the review what was your blocker. 
 
 ## Support
