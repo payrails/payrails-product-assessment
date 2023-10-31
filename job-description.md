@@ -16,7 +16,7 @@ At Payrails we are committed to building a team full of the most talented people
 Payrails is a dynamic workplace and our product team sits at the core of this landscape. Our mission is to drive a successful intersection between User Experience, Technology and Business. We do this by focusing on 3 main pillars:
 
 - Continuously studying our customers and the problems they are facing
-- Making sure we build a product that is feasible and best-in-class
+- Building a best-in-class, developer-friendly product
 - Ensuring our product-market fit is always top of mind
 
 Within that broader Payrails Product Team, as part of the Payment Integrations team, you will focus on the seamless integration of payment solutions across diverse platforms and regions. Your role will be instrumental in ensuring that Payrails' payment solutions work flawlessly across various merchant platforms, prioritizing efficiency and user experience.
