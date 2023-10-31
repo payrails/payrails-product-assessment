@@ -2,6 +2,8 @@
 
 Welcome to the Payrails Product assessement! This repository contains all the resources you need to complete the Payrails Product assessment. 
 
+This assessment is part of the application process for the position of [Technical Prodsuct Manager](./job-description.md) at Payrails.
+
 > [!IMPORTANT]
 > Read this page very carefully to understand the precise expectations before you get started.
 
