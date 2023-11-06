@@ -151,7 +151,8 @@ To ensure successful tokenization, please verify that the holder reference provi
 ## Expectations
 
 1. Use the programming language(s) of your choice: we love them all, it really doesn't matter!
-2. Clone this repository and push the your solution there.
+2. Fork this repository.
+3. Push the your solution into your own repo or send us as a zip file.
 3. Extend this Readme with some instructions to test your solution.
 4. Prepare yourself for an online demo and code review.
 
